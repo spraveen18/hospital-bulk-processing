@@ -15,7 +15,7 @@ def get_client() -> httpx.AsyncClient:
             base_url=BASE_URL,
             timeout=httpx.Timeout(
                 connect=5.0,   # time to establish TCP connection
-                read=10.0,     # time to wait for server response
+                read=30.0,     # time to wait for server response
                 write=5.0,     # time to send request body
                 pool=2.0,      # time to wait for a connection from pool
             ),
